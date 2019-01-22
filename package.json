@@ -18,6 +18,9 @@
   },
   "homepage": "https://github.com/LoganLeopold/MEHN#readme",
   "dependencies": {
-    "express": "^4.16.4"
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "hbs": "^4.0.1",
+    "mongoose": "^5.4.6"
   }
 }
