@@ -6,10 +6,11 @@ const Recipe = new Schema({
     description: String,
     instructions: String,
     ingredients: [String],
-    User: {
-        type: Schema.Types.ObjectId,
-        ref: 'User'
-    }
+    email: String
+    // User: {
+    //     type: Schema.Types.ObjectId,
+    //     ref: 'User'
+    // }
 })
 
 module.exports = {
