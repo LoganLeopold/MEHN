@@ -6,13 +6,13 @@ module.exports = {
         res.send("Hello world")
     },
     
-    show: (req,res) => {
-        Recipe.findOne({_id: req.params.id}).populate('title description instructions ingredients email')
-        .exec((err, recipe) => {
-            res.render('recipesViews/viewRecipe')
-        })
+    // show: (req,res) => {
+    //     Recipe.findOne({_id: req.params.id}).populate('title description instructions ingredients email')
+    //     .exec((err, recipe) => {
+    //         res.render('recipesViews/viewRecipe')
+    //     })
         
-    },
+    // },
     // create: (req,res) => {
 //   Recipe.create({
 //     title: req.body.Recipe.title,

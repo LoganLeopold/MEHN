@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const userController = ('../controllers/usersControllers')
+const userController = require('../controllers/usersControllers')
 
 router.get('/new', userController.new)
 

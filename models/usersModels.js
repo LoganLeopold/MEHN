@@ -8,12 +8,12 @@ const User = new Schema({
     },
     Email: String,
     Password: String,
-    Recipe: [ 
-        {
-        type: Schema.Types.ObjectId.app,
-        ref: 'Recipe'
-        }
-    ]
+    // Recipe: [ 
+    //     {
+    //     type: Schema.Types.ObjectId.app,
+    //     ref: 'Recipe'
+    //     }
+    // ]
 })
 
 
