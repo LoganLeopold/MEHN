@@ -12,7 +12,7 @@ module.exports = {
             res.render('recipesViews/viewRecipe')
         })
         
-    }
+    },
     // create: (req,res) => {
 //   Recipe.create({
 //     title: req.body.Recipe.title,
@@ -37,6 +37,18 @@ module.exports = {
 
 // },
 
+new: (req,res) => {
+    res.render('/recipesViews/createRecipes', )
+    console.log("new recipe form")
+}
+
+// show: (req,res) => {
+//     Recipe.findOne({_id: req.params.id}).populate('title description instructions ingredients email')
+//     .exec((err, recipe) => {
+//         res.render('recipesViews/viewRecipe')
+//     })
+    
+// }
 }
 
 

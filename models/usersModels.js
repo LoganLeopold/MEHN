@@ -6,6 +6,8 @@ const User = new Schema({
         firstName: String,
         lastName: String
     },
+    Email: String,
+    Password: String,
     Recipe: [ 
         {
         type: Schema.Types.ObjectId.app,
