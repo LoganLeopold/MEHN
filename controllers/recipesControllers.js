@@ -21,9 +21,14 @@ create: (req,res) => {
     ingredients: req.body.Recipe.ingredients,
     email: req.body.Recipe.email,
   }).then(newRecipe => {
-      req.user.recipe.push(newRecipe)
+      req.user.Recipe.push(newRecipe)
   })
 
+},
+
+new: (req,res) => {
+    // res.render('/new', 'recipesViews/createRecipes')
+    res.send("Hello world")
 },
 
 show: (req,res) => {
