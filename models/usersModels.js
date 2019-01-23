@@ -6,10 +6,12 @@ const User = new Schema({
         firstName: String,
         lastName: String
     },
-    Recipe: {
+    Recipe: [ 
+        {
         type: Schema.Types.ObjectId.app,
         ref: 'Recipe'
-    }
+        }
+    ]
 })
 
 
