@@ -27,7 +27,7 @@ module.exports = {
 // },
 
 new: (req,res) => {
-    // res.render('/recipesViews/createRecipes', )
+    res.render('/recipesViews/createRecipes', )
     console.log("new recipe form")
 }
 
