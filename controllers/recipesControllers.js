@@ -12,9 +12,7 @@ module.exports = {
 //   }).then(recipe => {
 //       req.email.
 //   })
-// 
-// }
-
+// ,
 show: (req,res) => {
     Recipe.findOne({_id: req.params.id}).populate('title description instructions ingredients email')
     .exec((err, recipe) => {
@@ -22,6 +20,4 @@ show: (req,res) => {
     })
     
 }
-
-
 }
