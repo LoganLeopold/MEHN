@@ -2,12 +2,10 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const User = new Schema({
-    Name: {
-        firstName: String,
-        lastName: String
-    },
+    firstName: String,
+    lastName: String,
     Email: String,
-    Password: String,
+    Password: String
     // Recipe: [ 
     //     {
     //     type: Schema.Types.ObjectId.app,
