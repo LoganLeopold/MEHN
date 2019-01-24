@@ -1,5 +1,5 @@
-const User = require('../models/usersModels')
-const mongoose = require('mongoose')
+const { User } = require('../models/usersModels')
+// const mongoose = require('mongoose')
 
 module.exports = {
     show: (req, res) => {
@@ -16,26 +16,11 @@ module.exports = {
         User.create({
             firstName: req.body.firstName,
             lastName: req.body.lastName,
-            email: req.body.email,
-            password: req.body.password
+            Email: req.body.Email,
+            Password: req.body.Password
         }).then(newUser => {
-            // res.send(hello)
             res.redirect('/')
         })  
-        // User.collection(Users).insertOne(
-        //     {
-        //         firstName: req.body.firstName,
-        //         lastName: req.body.lastName,
-        //         Email: req.body.email,
-        //         Password: req.body.password
-        //     })
-        // User.create({
-        //     firstName: req.body.firstName,
-        //     lastName: req.body.lastName,
-        //     email: req.body.email,
-        //     password: req.body.password
-        // }).then()
-        // })  
     }
 }
 
