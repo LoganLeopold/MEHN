@@ -7,6 +7,7 @@ module.exports = {
             res.render('UsersViews/usersViews', data)
         })
     },
+
     new: (req, res) => {
         res.render('UsersViews/newUserForm')
     },
@@ -18,6 +19,7 @@ module.exports = {
             email: req.body.email,
             password: req.body.password
         }).then(newUser => {
+            // res.send(hello)
             res.redirect('/')
         })  
         // User.collection(Users).insertOne(
@@ -27,6 +29,13 @@ module.exports = {
         //         Email: req.body.email,
         //         Password: req.body.password
         //     })
+        // User.create({
+        //     firstName: req.body.firstName,
+        //     lastName: req.body.lastName,
+        //     email: req.body.email,
+        //     password: req.body.password
+        // }).then()
+        // })  
     }
 }
 
