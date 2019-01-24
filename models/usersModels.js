@@ -1,10 +1,8 @@
 const mongoose = require("../db/connection")
 const Schema = mongoose.Schema
-User.methods.encrypt = function(password) {
-    return bcrypt.hashSync(password, bcrypt.genSaltSync(8), null);
-  };
 
-  
+
+
 const User = new Schema({
     firstName: String,
     lastName: String,
@@ -12,6 +10,9 @@ const User = new Schema({
     Password: String
 })
 
+User.methods.encrypt = function(password) {
+    return bcrypt.hashSync(password, bcrypt.genSaltSync(8), null);
+  };
 
 
 // module.exports = mongoose.model('User', User)
