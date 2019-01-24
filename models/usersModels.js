@@ -1,6 +1,6 @@
 const mongoose = require("../db/connection")
 const Schema = mongoose.Schema
-
+var bcrypt   = require('bcrypt-nodejs')
 
 
 const User = new Schema({

@@ -16,8 +16,8 @@ module.exports = {
         User.create({
             firstName: req.body.firstName,
             lastName: req.body.lastName,
-            Email: req.body.Email,
-            Password: req.body.Password
+            // Email: req.body.Email,
+            // Password: req.body.Password
         }).then(newUser => {
             res.redirect('/')
         })

@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const userController = require('../controllers/usersControllers')
-const passport = require('../config/passport')
+const passport = require('passport')
 
 router.get('/new', userController.new)
 // router.post('/create', userController.create)
@@ -10,14 +10,13 @@ router.get('/show', userController.show)
 
 
 router.post('/create', (req, res) => {
-  console.log(passport)
-    // var signupStrategy = passport.authenticate('local-signup', {
-    //   successRedirect : '/',
-    //   failureRedirect : '/signup',
-    //   failureFlash : true
-    // });
+    var signupStrategy = passport.authenticate('local-signup', {
+      successRedirect : '/',
+      failureRedirect : '/new',
+      failureFlash : true
+    });
   
-    // return signupStrategy(req, res);
+    return signupStrategy(req, res);
   })
 
 // router.get('/', userController.index)
