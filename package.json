@@ -2,7 +2,7 @@
   "name": "MEHN",
   "version": "1.0.0",
   "description": "Evan + Roger + Logan MEHN Lab",
-  "main": "index.js",
+  "main": "indexRoot.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

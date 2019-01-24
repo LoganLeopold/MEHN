@@ -3,7 +3,10 @@ const router = express.Router()
 const userController = require('../controllers/usersControllers')
 
 router.get('/new', userController.new)
-router.post('/', userController.create)
+router.post('/create', userController.create)
+
+router.get('/show', userController.show)
+
 
 
 // router.get('/', userController.index)

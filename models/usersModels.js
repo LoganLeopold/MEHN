@@ -1,4 +1,4 @@
-const mongoose = require('mongoose')
+const mongoose = require("../db/connection")
 const Schema = mongoose.Schema
 
 const User = new Schema({
@@ -6,16 +6,9 @@ const User = new Schema({
     lastName: String,
     Email: String,
     Password: String
-    // Recipe: [ 
-    //     {
-    //     type: Schema.Types.ObjectId.app,
-    //     ref: 'Recipe'
-    //     }
-    // ]
 })
 
 
 module.exports = {
-    User: mongoose.model('User', User),
-
+    User: mongoose.model('User', User)
 }
