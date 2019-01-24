@@ -1,13 +1,23 @@
 const express = require('express')
 const router = express.Router()
 const userController = require('../controllers/usersControllers')
+const userPassport = require('../config/passport')
 
 router.get('/new', userController.new)
-router.post('/create', userController.create)
+// router.post('/create', userController.create)
 
 router.get('/show', userController.show)
 
 
+router.post('/create', (req, res) => {
+    var signupStrategy = passport.authenticate('local-signup', {
+      successRedirect : '/',
+      failureRedirect : '/signup',
+      failureFlash : true
+    });
+  
+    return signupStrategy(req, res);
+  })
 
 // router.get('/', userController.index)
 // router.post('/', userController.create)

@@ -20,7 +20,7 @@ module.exports = {
             Password: req.body.Password
         }).then(newUser => {
             res.redirect('/')
-        })  
+        })
     }
 }
 
